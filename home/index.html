@@ -1,21 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My first Vue page</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Kristoff Aadryk L. Viray - Profile</title>
+  <link rel="stylesheet" href="css/style.css?version=0.1">
+  <link rel="stylesheet" href="css/flexbox-grid.css">
+  <link rel="stylesheet" href="css/images.css">
+  <style>
+    /* Styling for the Vue highlight box as seen in your screenshots */
+    #app {
+      display: inline-block;
+      padding: 10px;
+      font-size: x-large;
+      background-color: lightgreen;
+      margin: 20px 0;
+    }
+    .gallery-container img {
+      width: 150px;
+      margin: 5px;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
 
-<h1>Vue Example</h1>
-
-<p>The message is taken from 'data' inside the Vue instance by writing {{ message }} inside the div with id="app".</p>
+    <div class="container">
+        <header> <h1>Personal Profile Web page - Kristoff Aadryk L. Viray</h1> </header>
+        <main>
+          <section class="main-content">
+            <div>1 About Me: 19-year-old CS student specializing in Cybersecurity.</div>
+            <div>2 Education: Studying at Asia Pacific College.</div>
+            <div>3 Course: BS in Computer Science.</div>  
+            <div>4 IT Experience: Assistant Director of Marketing (JISSA & JPCS).</div>
+            <div>5 Hobbies & Interests: Gaming, music, and CTF challenges.</div>
+            <div>6 Goals In Life / Dream: Digital Forensics Expert.</div>  
+            <div>7 Picture Gallery: Dynamic gallery below.</div>
+          </section>
+          <aside class="sidebar">
+              <p>Specialization: Cybersecurity and Digital Forensics</p>
+          </aside>
+        </main>
+        <footer> Asia Pacific College </footer>
+    </div>
 
 <div id="app">
   {{ message }}
 </div>
 
+<div id="app2">
+  <div class="gallery-container">
+    <img v-for="x in manyFoods" v-bind:src="x">
+  </div>
+</div>
+
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script src="js/vue.js"></script>
+<script src="js/images.js"></script>
 
 </body>
 </html>
