@@ -1,48 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Kristoff Aadryk L. Viray</title>
-  <link rel="stylesheet" href="css/style.css?version=0.1">
-  <link rel="stylesheet" href="css/flexbox-grid.css">
-  <link rel="stylesheet" href="css/images.css">
+  <title>My first Vue page</title>
+  <style>
+    #app {
+      display: inline-block;
+      padding: 10px;
+      font-size: x-large;
+      background-color: lightgreen;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <header> 
-          <h1>Personal Profile Web page - Kristoff Aadryk L. Viray</h1> 
-        </header>
-        <main>
-          <section class="main-content">
-            <div>1 About Me: 19-year-old CS student at APC.</div>
-            <div>2 Education: Specializing in Cybersecurity and Digital Forensics.</div>
-            <div>3 Course: Bachelor of Science in Computer Science.</div>  
-            <div>4 IT Experience: Trend Micro UCTF Competitor.</div>
-            <div>5 Hobbies & Interests: Gaming, Music, and Chill Vibes.</div>
-            <div>6 Goals In Life / Dream: To become a Cybersecurity Expert.</div>  
-            <div>7 Picture Gallery: (See below for dynamic images)</div>
-          </section>
-          <aside class="sidebar">
-              <p>Assistant Director of Marketing: JISSA & JPCS</p>
-          </aside>
-        </main>
-        <footer> Asia Pacific College </footer>
-    </div>
+<h1>Vue Example</h1>
+
+<p>The message is taken from 'data' inside the Vue instance by writing {{ message }} inside the div with id="app".</p>
 
 <div id="app">
   {{ message }}
 </div>
 
-<div id="app2">
-  <div>
-    <img v-for="x in manyFoods" v-bind:src="x" style="width:150px; margin:5px;">
-  </div>
-</div>
-
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-<script src="js/vue.js"></script>
-<script src="js/images.js"></script>
+<script>
+  const app = Vue.createApp({
+   data() {
+    return {
+     message: "Hello World!"
+    }
+   }
+  })
+  
+  app.mount('#app')
+
+</script>
 
 </body>
 </html>
