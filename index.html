@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue Hello World</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <style>
+    body { font-family: sans-serif; display: flex; justify-content: center; padding-top: 50px; }
+    #app { border: 2px solid #42b883; padding: 20px; border-radius: 8px; text-align: center; }
+    h1 { color: #35495e; }
+    button { background: #42b883; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <div id="app">
+    <h1>{{ message }}</h1>
+    <p>The time is: {{ timestamp }}</p>
+    <button @click="reverseMessage">Reverse Message</button>
+  </div>
+
+  <script>
+    const { createApp } = Vue
+
+    createApp({
+      data() {
+        return {
+          message: 'Hello World!',
+          timestamp: new Date().toLocaleTimeString()
+        }
+      },
+      methods: {
+        reverseMessage() {
+          this.message = this.message.split('').reverse().join('')
+        }
+      }
+    }).mount('#app')
+  </script>
+
+</body>
+</html>
