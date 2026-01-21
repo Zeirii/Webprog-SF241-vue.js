@@ -1,41 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Vue Hello World</title>
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-  <style>
-    body { font-family: sans-serif; display: flex; justify-content: center; padding-top: 50px; }
-    #app { border: 2px solid #42b883; padding: 20px; border-radius: 8px; text-align: center; }
-    h1 { color: #35495e; }
-    button { background: #42b883; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; }
-  </style>
+  <title>Kristoff Aadryk L. Viray</title>
+  <link rel="stylesheet" href="css/style.css?version=0.1">
+  <link rel="stylesheet" href="css/flexbox-grid.css">
+  <link rel="stylesheet" href="css/images.css">
 </head>
 <body>
 
-  <div id="app">
-    <h1>{{ message }}</h1>
-    <p>The time is: {{ timestamp }}</p>
-    <button @click="reverseMessage">Reverse Message</button>
+    <div class="container">
+        <header> 
+          <h1>Personal Profile Web page - Kristoff Aadryk L. Viray</h1> 
+        </header>
+        <main>
+          <section class="main-content">
+            <div>1 About Me: 19-year-old CS student at APC.</div>
+            <div>2 Education: Specializing in Cybersecurity and Digital Forensics.</div>
+            <div>3 Course: Bachelor of Science in Computer Science.</div>  
+            <div>4 IT Experience: Trend Micro UCTF Competitor.</div>
+            <div>5 Hobbies & Interests: Gaming, Music, and Chill Vibes.</div>
+            <div>6 Goals In Life / Dream: To become a Cybersecurity Expert.</div>  
+            <div>7 Picture Gallery: (See below for dynamic images)</div>
+          </section>
+          <aside class="sidebar">
+              <p>Assistant Director of Marketing: JISSA & JPCS</p>
+          </aside>
+        </main>
+        <footer> Asia Pacific College </footer>
+    </div>
+
+<div id="app">
+  {{ message }}
+</div>
+
+<div id="app2">
+  <div>
+    <img v-for="x in manyFoods" v-bind:src="x" style="width:150px; margin:5px;">
   </div>
+</div>
 
-  <script>
-    const { createApp } = Vue
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-    createApp({
-      data() {
-        return {
-          message: 'Hello World!',
-          timestamp: new Date().toLocaleTimeString()
-        }
-      },
-      methods: {
-        reverseMessage() {
-          this.message = this.message.split('').reverse().join('')
-        }
-      }
-    }).mount('#app')
-  </script>
+<script src="js/vue.js"></script>
+<script src="js/images.js"></script>
 
 </body>
 </html>
