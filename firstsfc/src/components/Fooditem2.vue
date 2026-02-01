@@ -1,10 +1,10 @@
 <template>
-  <div class ="sushi"></div>
+  <div class="sushi">
     <h2>{{ name }}</h2>
     <p>{{ message }}</p>
   </div>
 </template>
- 
+
 <script>
 export default {
   data() {
@@ -15,7 +15,7 @@ export default {
   }
 };
 </script>
- 
+
 <style>
 .sushi {
   border: dashed black 1px;
