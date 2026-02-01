@@ -47,10 +47,6 @@
     <main>
       <section class="card" id="tech">
         <h2>Tech Confidence Levels</h2>
-        <p class="muted">
-          These are rough confidence percentages for the tools and languages used most often.
-        </p>
-
         <div class="confidence-grid">
           <div v-for="skill in skills" :key="skill.label" class="confidence-item">
             <span class="label">{{ skill.label }}</span>
@@ -60,13 +56,6 @@
             <span class="percent">{{ skill.level }}%</span>
           </div>
         </div>
-      </section>
-
-      <section class="card" id="about">
-        <h2>About Kristoff</h2>
-        <p>
-          Currently 19 and in second year CS at Asia Pacific College, specializing in Cybersecurity and Digital Forensics.
-        </p>
       </section>
 
       <section class="card" id="contact">
@@ -87,8 +76,8 @@ export default {
     return {
       fullName: 'Kristoff Aadryk L. Viray',
       specialization: 'Cybersecurity · Digital Forensics · Org Life',
-      bio: '19-year-old Second Year Computer Science student specializing in Cybersecurity and Digital Forensics at Asia Pacific College.',
-      roles: 'Assistant Director of Marketing of JISSA and JPCS • Antipolo-based • Chill, fun-loving, and always down for org work.',
+      bio: '19-year-old Second Year Computer Science student at Asia Pacific College.',
+      roles: 'Assistant Director of Marketing of JISSA and JPCS • Antipolo-based',
       skills: [
         { label: 'HTML', level: 75 },
         { label: 'Java', level: 60 },
@@ -97,9 +86,7 @@ export default {
         { label: 'Kali Linux', level: 70 },
         { label: 'CSS', level: 50 }
       ],
-      magnetStyle: {
-        transform: 'translate(0, 0)'
-      }
+      magnetStyle: { transform: 'translate(0px, 0px)' }
     };
   },
   methods: {
@@ -111,8 +98,10 @@ export default {
       this.magnetStyle.transform = `translate(${x * strength}px, ${y * strength}px)`;
     },
     resetMagnet() {
-      this.magnetStyle.transform = 'translate(0, 0)';
+      this.magnetStyle.transform = 'translate(0px, 0px)';
     }
   }
 };
 </script>
+
+<style></style>
