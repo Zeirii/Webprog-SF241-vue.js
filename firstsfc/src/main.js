@@ -4,8 +4,7 @@ import App from './App.vue'
 import FoodItem from './components/FoodItem.vue'
 import FoodItem2 from './components/Fooditem2.vue'
 import PersonalProfile from './components/Personalprofile.vue'
-
-import './css/personalprofile.css'
+import './components/css/personalprofile.css'
 
 const app = createApp(App)
 
