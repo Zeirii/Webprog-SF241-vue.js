@@ -1,5 +1,5 @@
 <template>
-  <div class = "matcha"></div>
+  <div class ="sushi"></div>
     <h2>{{ name }}</h2>
     <p>{{ message }}</p>
   </div>
@@ -9,19 +9,19 @@
 export default {
   data() {
     return {
-      name: ['matcha','latte','cookies and cream'],
-      message: ['I like matcha','I like latte', 'I like cookies and cream']
+      name: ['sushi', 'ramen', 'onigiri'],
+      message: ['I like sushi ramen and onigiri']
     }
   }
 };
 </script>
  
 <style>
-.matcha {
+.sushi {
   border: dashed black 1px;
   display: inline-block;
   margin: 10px;
   padding: 10px;
-  background-color: lightgreen;
+  background-color: rgb(238, 144, 144);
 }
 </style>
