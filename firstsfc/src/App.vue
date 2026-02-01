@@ -1,10 +1,16 @@
 <template>
-  <h1>my personal profile</h1>
-   <Personal-profile/>
-  <food-item/>
-  <food-item2/>
+  <h1>{{ message }}</h1>
+  <personal-profile />
+  <food-item />
+  <food-item2 />
 </template>
- 
-<script></script>
 
-<style></style>
+<script>
+export default {
+  data() {
+    return {
+      message: 'Welcome to my Portfolio'
+    };
+  }
+};
+</script>
